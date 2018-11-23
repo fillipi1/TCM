@@ -48,7 +48,7 @@ export default class App extends React.Component {
     buttonText: {
         textAlign: 'center',
         color: 'white',
-        fontWeight: '900'
+        fontWeight: '800'
     }
   });
   
