@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Image } from 'react-native';
 import LoginForm from './loginForm'
 
-export default class App extends React.Component {
+export default class Login extends React.Component {
     render() {
       return (
         <KeyboardAvoidingView behavior = 'padding' style={styles.container}>
-         <Text style ={styles.title}>TCM APP</Text>
+         <Text style ={styles.title}>TCM</Text>
             <View style ={styles.logoContainer}>  
                 <Image style={styles.logo} source = {require('../../images/minion.png')}/>
                 <Text style ={styles.subTitle}>Fillipi's Minions at work</Text>

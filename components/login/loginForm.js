@@ -1,8 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar } from 'react-native';
-
-export default class App extends React.Component {
+import {createStackNavigator,createAppContainer} from 'react-navigation';
+ 
+export default class LoginForm extends React.Component {
+       
     render() {
+        const {navigate} = this.props;
       return (
         <View style={styles.container}>
         <StatusBar
@@ -22,7 +25,7 @@ export default class App extends React.Component {
                 secureTextEntry
                 ref = {(input) => this.passwordInput = input}
                 style ={styles.input}/>
-                <TouchableOpacity style = {styles.buttonContainer}>
+                <TouchableOpacity onPress={() => navigate('Profile')} style = {styles.buttonContainer}>
                     <Text style = {styles.buttonText}>
                         LOGIN
                     </Text>
