@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar } from 'react-native';
-import {createStackNavigator,createAppContainer} from 'react-navigation';
- 
+import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Button } from 'react-native';
+import loginUserSuccess from '../../actions/index';
+import { Actions } from 'react-native-router-flux';
+
 export default class LoginForm extends React.Component {
        
     render() {
-        const {navigate} = this.props;
       return (
         <View style={styles.container}>
         <StatusBar
@@ -25,7 +25,7 @@ export default class LoginForm extends React.Component {
                 secureTextEntry
                 ref = {(input) => this.passwordInput = input}
                 style ={styles.input}/>
-                <TouchableOpacity onPress={() => navigate('Profile')} style = {styles.buttonContainer}>
+                <TouchableOpacity onPress={() => Actions.navigationScreen()}  style = {styles.buttonContainer}>
                     <Text style = {styles.buttonText}>
                         LOGIN
                     </Text>
