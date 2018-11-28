@@ -2,18 +2,23 @@ import React from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Image } from 'react-native';
 import LoginForm from './loginForm';
 
+const minion = require('../../images/minion.png');
 
 export default class Login extends React.Component {
     render() {
       return (
-        <KeyboardAvoidingView behavior = 'padding' style={styles.container}>
-         <Text style ={styles.title}>TCM</Text>
-            <View style ={styles.logoContainer}>  
-                <Image style={styles.logo} source = {require('../../images/minion.png')}/>
-                <Text style ={styles.subTitle}>Fillipi's Minions at work</Text>
+        <KeyboardAvoidingView 
+        behavior={'position'} 
+        style={styles.container} 
+        keyboardVerticalOffset={-100} 
+        >
+         <Text style={styles.title}>TCM</Text>
+            <View style={styles.logoContainer}>  
+                <Image style={styles.logo} source={minion} />
+                <Text style={styles.subTitle}>Fillipi's Minions at work</Text>
             </View>
-            <View style ={styles.formContainer}>
-                <LoginForm/>
+            <View>
+                <LoginForm />
             </View>
         </KeyboardAvoidingView>
 );
@@ -52,4 +57,3 @@ export default class Login extends React.Component {
         textAlign: 'center'
     },
   });
-  

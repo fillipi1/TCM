@@ -1,32 +1,35 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Button } from 'react-native';
-import loginUserSuccess from '../../actions/index';
+import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-export default class LoginForm extends React.Component {
-       
+class LoginForm extends React.Component {
     render() {
       return (
         <View style={styles.container}>
         <StatusBar
-        barStyle = 'light-content'
+        barStyle='light-content'
         />
             <TextInput
-                placeholder = 'username or email'
-                returnKeyType = 'next'
-                onSubmitEditing = {() => this.passwordInput.focus()}
-                keyboardType = 'email-address'
-                autoCapitalize = 'none'
-                autoCorrect = {false}
-                style = {styles.input}/>
+                placeholder='username or email'
+                returnKeyType='next'
+                onSubmitEditing={() => this.passwordInput.focus()}
+                keyboardType='email-address'
+                autoCapitalize='none'
+                autoCorrect={false}
+                style={styles.input} 
+            />
             <TextInput
-                placeholder = 'password'
-                returnKeyType = 'go'
+                placeholder='password'
+                returnKeyType='go'
                 secureTextEntry
-                ref = {(input) => this.passwordInput = input}
-                style ={styles.input}/>
-                <TouchableOpacity onPress={() => Actions.navigationScreen()}  style = {styles.buttonContainer}>
-                    <Text style = {styles.buttonText}>
+                ref={input => { this.passwordInput = input; }}
+                style={styles.input} 
+            />
+                <TouchableOpacity 
+                onPress={() => Actions.navigationScreen()}  
+                style={styles.buttonContainer}
+                >
+                    <Text style={styles.buttonText}>
                         LOGIN
                     </Text>
                 </TouchableOpacity>
@@ -36,7 +39,7 @@ export default class LoginForm extends React.Component {
   }
   const styles = StyleSheet.create({
     container: {
-      padding:20, 
+      padding: 20, 
     },
     input: {
         height: 50,
@@ -54,4 +57,5 @@ export default class LoginForm extends React.Component {
         fontWeight: '800'
     }
   });
-  
+
+export default LoginForm;
