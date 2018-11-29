@@ -6,9 +6,6 @@ class LoginForm extends React.Component {
     render() {
       return (
         <View style={styles.container}>
-        <StatusBar
-        barStyle='light-content'
-        />
             <TextInput
                 placeholder='username or email'
                 returnKeyType='next'
@@ -45,11 +42,13 @@ class LoginForm extends React.Component {
         height: 50,
         backgroundColor: 'rgba(230,230,230,0.4)',
         marginBottom: 12,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        borderRadius: 20,
     },
     buttonContainer: {
         backgroundColor: '#2980b9',
-        paddingVertical: 15
+        paddingVertical: 15,
+        borderRadius: 20,
     },
     buttonText: {
         textAlign: 'center',

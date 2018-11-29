@@ -1,64 +1,58 @@
 import React from 'react';
-import { StyleSheet, View, Text, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
-const { width } = Dimensions.get('window');
-const height = width * 1.5;
-const widths = width * 10;
 
-export default class NavigationScreen extends React.Component {
+class NavigationScreen extends React.Component {
 
     render() {
       return (
-<ScrollView >
-            <View style={styles.scrollContainer}>
+            <View style={styles.container}>
               <View style={styles.top}> 
-                <View style={styles.profileImage} />
               </View>
-              <ScrollView horizontal> 
               <View style={styles.bottom}>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
-                  <View style={styles.bottomItem}>
-                    <View style={styles.bottomItemInner} />
-                  </View>
+                  <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.login()} >
+                    <View style={[styles.bottomItemInner, { backgroundColor: '#A75252', borderColor: '#A75252' }]}>
+                      <Text style={[styles.text, { marginLeft: 22 }]}>
+                        Academy
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.bottomItem}>
+                    <View style={[styles.bottomItemInner, { backgroundColor: '#395176', borderColor: '#395176' }]}>
+                      <Text style={[styles.text, { marginLeft: 43 }]}>
+                        Forum
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.bottomItem}>
+                    <View style={[styles.bottomItemInner, { backgroundColor: '#5B9377', borderColor: '#5B9377' }]}>
+                      <Text style={[styles.text, { marginLeft: 17 }]}>
+                        Exam Prep
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.bottomItem}>
+                    <View style={[styles.bottomItemInner, { backgroundColor: '#D4D55D', borderColor: '#D4D55D' }]}>
+                      <Text style={[styles.text, { marginLeft: 10 }]}>
+                        Health Files
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
               </View>
-              </ScrollView>
             </View>
-            </ScrollView>
 );
     }
   }
   const styles = StyleSheet.create({
     container: {
       flex: 1, 
-    },
-    scrollContainer: {
-      height,
-      flex: 1
+      backgroundColor: '#fff'
     },
     top: {
-      height: '25%',
+      height: '10%',
       alignItems: 'flex-start',
-      backgroundColor: '#98d2c1',
+      backgroundColor: '#3498db',
       justifyContent: 'center'
     },
     profileImage: {
@@ -66,24 +60,38 @@ export default class NavigationScreen extends React.Component {
       height: 100,
       borderRadius: 80,
       borderWidth: 3,
-      borderColor: 'white',
+      borderColor: '#fff',
       backgroundColor: '#eee',
       },
       bottom: {
-        width: 1000,
+        height: '100%',
         backgroundColor: '#fff',
-        flexDirection: 'column',
+        flexDirection: 'row',
         flexWrap: 'wrap',
-        padding: 5
+        marginLeft: 10,
+        marginTop: 30,
       },
       bottomItem: {
-        width: '20%',
+        width: '50%',
         height: '30%',
-        padding: 0,
+        marginBottom: 20,
       },
       bottomItemInner: {
-        backgroundColor: '#292929',
         width: '95%',
-        height: '95%'
+        height: '95%',
+        marginBottom: 20,
+        shadowOpacity: 1,
+        shadowRadius: 3,
+        shadowColor: 'black',
+        shadowOffset: { width: 1, height: 1 },
+        borderRadius: 20,
+        borderWidth: 2,
+      },
+      text: {
+        color: 'white',
+        fontSize: 30,
+        marginTop: 20
       }
   });
+
+  export default NavigationScreen; 

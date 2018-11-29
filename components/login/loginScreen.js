@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView, Image } from 'react-native';
+import { StyleSheet, Text, View, KeyboardAvoidingView, Image, StatusBar } from 'react-native';
 import LoginForm from './loginForm';
 
 const minion = require('../../images/minion.png');
@@ -13,7 +13,11 @@ export default class Login extends React.Component {
         keyboardVerticalOffset={-100} 
         >
          <Text style={styles.title}>TCM</Text>
-            <View style={styles.logoContainer}>  
+            <View style={styles.logoContainer}> 
+            <StatusBar
+                barStyle="light-content"
+                 backgroundColor="red"
+            /> 
                 <Image style={styles.logo} source={minion} />
                 <Text style={styles.subTitle}>Fillipi's Minions at work</Text>
             </View>
