@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Image, StatusBar } from 'react-native';
 import LoginForm from './loginForm';
 
-const minion = require('../../images/minion.png');
+const minion = require('../../images/yinyang2.png');
 
 export default class Login extends React.Component {
     render() {
@@ -12,14 +12,11 @@ export default class Login extends React.Component {
         style={styles.container} 
         keyboardVerticalOffset={-100} 
         >
-         <Text style={styles.title}>TCM</Text>
+            <StatusBar barStyle="light-content" /> 
+            <Text style={styles.title}>TCM</Text>
             <View style={styles.logoContainer}> 
-            <StatusBar
-                barStyle="light-content"
-                 backgroundColor="red"
-            /> 
                 <Image style={styles.logo} source={minion} />
-                <Text style={styles.subTitle}>Fillipi's Minions at work</Text>
+                <Text style={styles.subTitle}>Login or Sign up</Text>
             </View>
             <View>
                 <LoginForm />
@@ -31,16 +28,16 @@ export default class Login extends React.Component {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#3498db',
+      backgroundColor: '#707272',
     },
     welcome: {
         fontSize: 30,
-        color: 'white',
+        color: 'black',
         textAlign: 'center',
     },
     logo: {
-        width: 140,
-        height: 140,
+        width: 200,
+        height: 200,
     },
     logoContainer: {
         alignItems: 'center',
@@ -48,13 +45,13 @@ export default class Login extends React.Component {
         flexGrow: 1
     },
     subTitle: {
-        color: '#f1c40f',
+        color: 'white',
         marginTop: 10,
         fontSize: 20,
         fontWeight: '900'
     },
     title: {
-        color: '#dff9fb',
+        color: 'black',
         marginTop: 30,
         fontSize: 50,
         fontWeight: '700',

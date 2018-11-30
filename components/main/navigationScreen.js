@@ -6,7 +6,7 @@ const joe = require('../../images/jre.png');
 const academy = require('../../images/academy.png');
 const forum = require('../../images/forum.png');
 const exam = require('../../images/exam.png');
-const files = require('../../images/files.png');
+const files = require('../../images/file.png');
 
 class NavigationScreen extends React.Component {
 
@@ -22,16 +22,32 @@ class NavigationScreen extends React.Component {
               </Text>
             </View>
             <View style={styles.blueHeader}>
-              <TouchableOpacity style={styles.bottomItem2} onPress={() => Actions.login()} >
-                <View style={styles.bottomItemInner2}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.login()} >
+                <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={academy} />
                   <Text style={styles.text}>
                     Academy
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem2}>
-                <View style={styles.bottomItemInner2}>
+              <TouchableOpacity style={styles.bottomItem}>
+                <View style={styles.bottomItemInner}>
+                  <Image style={styles.logo} source={exam} />
+                  <Text style={styles.text}>
+                    Exam prep
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.bottomItem}>
+                <View style={styles.bottomItemInner}>
+                  <Image style={styles.logo} source={files} />
+                  <Text style={styles.text}>
+                    Health Files
+                  </Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.bottomItem}>
+                <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={forum} />
                   <Text style={styles.text}>
                     Forum
@@ -40,24 +56,6 @@ class NavigationScreen extends React.Component {
               </TouchableOpacity>
             </View>
           </View> 
-          <TouchableOpacity style={{ width: 10 }} />
-          <View style={{ width: '50%', height: '25%', justifyContent: 'center', alignItems: 'center' }} /> 
-          <TouchableOpacity style={styles.bottomItem}>
-            <View style={styles.bottomItemInner}>
-              <Image style={styles.logo} source={exam} />
-              <Text style={styles.text}>
-                Exam Prep
-              </Text>
-            </View>
-          </TouchableOpacity> 
-          <TouchableOpacity style={styles.bottomItem}>
-            <View style={styles.bottomItemInner}>
-              <Image style={styles.logo} source={files} />
-              <Text style={styles.text}>
-                Health Files
-              </Text>
-            </View>
-          </TouchableOpacity>
         </View>
       </View>
     );
@@ -99,31 +97,12 @@ class NavigationScreen extends React.Component {
       },
       bottomItem: {
         width: '50%',
-        height: '30%',
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      bottomItemInner: {
-        width: '95%',
-        height: '85%',
-        shadowOpacity: 1,
-        shadowRadius: 3,
-        shadowColor: 'black',
-        shadowOffset: { width: 1, height: 1 },
-        borderRadius: 15,
-        backgroundColor: '#fff',
-        borderColor: '#fff',
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-      bottomItem2: {
-        width: '50%',
         height: '50%',
         marginBottom: '45%',
-        marginTop: '5%',
+        marginTop: '0%',
  
       },
-      bottomItemInner2: {
+      bottomItemInner: {
         width: '95%',
         height: '85%',
         shadowOpacity: 1,
