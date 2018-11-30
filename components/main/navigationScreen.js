@@ -41,7 +41,7 @@ class NavigationScreen extends React.Component {
             </View>
           </View> 
           <TouchableOpacity style={{ width: 10 }} />
-          <TouchableOpacity style={styles.bottomItem} /> 
+          <View style={{ width: '50%', height: '25%', justifyContent: 'center', alignItems: 'center' }} /> 
           <TouchableOpacity style={styles.bottomItem}>
             <View style={styles.bottomItemInner}>
               <Image style={styles.logo} source={exam} />
@@ -52,7 +52,7 @@ class NavigationScreen extends React.Component {
           </TouchableOpacity> 
           <TouchableOpacity style={styles.bottomItem}>
             <View style={styles.bottomItemInner}>
-              <Image style={styles.logo} source={forum} />
+              <Image style={styles.logo} source={files} />
               <Text style={styles.text}>
                 Health Files
               </Text>
