@@ -45,7 +45,7 @@ export default class Login extends React.Component {
         flexGrow: 1
     },
     subTitle: {
-        color: 'white',
+        color: '#fff',
         marginTop: 10,
         fontSize: 20,
         fontWeight: '900'

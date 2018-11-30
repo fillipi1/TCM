@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-const joe = require('../../images/jre.png');
+const joe = require('../../images/joe.jpg');
 const academy = require('../../images/academy.png');
 const forum = require('../../images/forum.png');
 const exam = require('../../images/exam.png');
-const files = require('../../images/file.png');
+const files = require('../../images/files.png');
+const headerImage = require('../../images/water3.png');
 
 class NavigationScreen extends React.Component {
 
@@ -16,13 +17,18 @@ class NavigationScreen extends React.Component {
         <View style={styles.bottom}>
           <View style={styles.top}>
             <View style={{ alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
-              <Image style={styles.logo} source={joe} />
-              <Text style={{ fontSize: 30, color: 'white' }}>
+            <ImageBackground source={headerImage} style={{ width: '100%', height: '90%', flexGrow: 1, alignItems: 'center', justifyContent: 'center' }} >
+            <Image style={styles.profile} source={joe} />
+            <Text style={{ fontSize: 30, fontWeight: '700', color: 'white' }}>
                 Joe Rogan
-              </Text>
+            </Text>
+            <Text style={{ fontSize: 15, fontWeight: '700', color: 'black' }}>
+                Level: Sage
+            </Text>
+            </ImageBackground>   
             </View>
             <View style={styles.blueHeader}>
-              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.login()} >
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.academy()} >
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={academy} />
                   <Text style={styles.text}>
@@ -30,7 +36,7 @@ class NavigationScreen extends React.Component {
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.exam()}>
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={exam} />
                   <Text style={styles.text}>
@@ -38,7 +44,7 @@ class NavigationScreen extends React.Component {
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.health()}>
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={files} />
                   <Text style={styles.text}>
@@ -46,7 +52,7 @@ class NavigationScreen extends React.Component {
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.forum()}>
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={forum} />
                   <Text style={styles.text}>
@@ -88,6 +94,13 @@ class NavigationScreen extends React.Component {
       alignItems: 'center',
       justifyContent: 'center',
       },
+      profile: {
+        width: 80,
+        height: 80,
+        borderRadius: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+        },
       bottom: {
         height: '100%',
         backgroundColor: '#fff',

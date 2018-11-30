@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar } from 'react-native';
+import { StyleSheet, View, TextInput, TouchableOpacity, Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 class LoginForm extends React.Component {
@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
     },
     buttonText: {
         textAlign: 'center',
-        color: 'white',
+        color: '#fff',
         fontWeight: '800'
     }
   });
