@@ -36,7 +36,7 @@ class LoginForm extends React.Component {
   }
   const styles = StyleSheet.create({
     container: {
-      padding: 20, 
+      padding: '10%', 
     },
     input: {
         height: 50,
@@ -53,7 +53,7 @@ class LoginForm extends React.Component {
     buttonText: {
         textAlign: 'center',
         color: '#fff',
-        fontWeight: '800'
+        fontWeight: '800',
     }
   });
 

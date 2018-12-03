@@ -12,7 +12,7 @@ export default class Login extends React.Component {
         style={styles.container} 
         keyboardVerticalOffset={-100} 
         >
-            <StatusBar barStyle="light-content" /> 
+            <StatusBar barStyle="dark-content" /> 
             <Text style={styles.title}>TCM</Text>
             <View style={styles.logoContainer}> 
                 <Image style={styles.logo} source={minion} />
@@ -36,13 +36,14 @@ export default class Login extends React.Component {
         textAlign: 'center',
     },
     logo: {
-        width: 200,
-        height: 200,
+        width: '80%',
+        height: '80%',
     },
     logoContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-        flexGrow: 1
+        flexGrow: 1,
+        height: '30%',
     },
     subTitle: {
         color: '#fff',

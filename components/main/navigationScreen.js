@@ -17,7 +17,7 @@ class NavigationScreen extends React.Component {
         <View style={styles.bottom}>
           <View style={styles.top}>
             <View style={{ alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
-            <ImageBackground source={headerImage} style={{ width: '100%', height: '90%', flexGrow: 1, alignItems: 'center', justifyContent: 'center' }} >
+            <ImageBackground source={headerImage} style={{ width: '100%', height: '100%', flexGrow: 1, alignItems: 'center', justifyContent: 'center' }} >
             <Image style={styles.profile} source={joe} />
             <Text style={{ fontSize: 30, fontWeight: '700', color: 'white' }}>
                 Joe Rogan
@@ -79,17 +79,15 @@ class NavigationScreen extends React.Component {
       flexGrow: 1,
     },
     blueHeader: {
-      height: '25%',
-      backgroundColor: '#3498db',
-      width: '100%',
+      marginTop: -20,
       flexDirection: 'row',
       flexWrap: 'wrap',
       display: 'flex',
       
     },
     logo: {
-      width: 80,
-      height: 80,
+      width: '45%',
+      height: '45%',
       borderRadius: 30,
       alignItems: 'center',
       justifyContent: 'center',
@@ -111,9 +109,7 @@ class NavigationScreen extends React.Component {
       bottomItem: {
         width: '50%',
         height: '50%',
-        marginBottom: '45%',
-        marginTop: '0%',
- 
+        marginBottom: '14%',
       },
       bottomItemInner: {
         width: '95%',
