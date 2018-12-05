@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
         <View style={styles.container}>
             <TextInput
                 placeholder='username or email'
+                placeholderTextColor='#fff'
                 returnKeyType='next'
                 onSubmitEditing={() => this.passwordInput.focus()}
                 keyboardType='email-address'
@@ -17,6 +18,7 @@ class LoginForm extends React.Component {
             />
             <TextInput
                 placeholder='password'
+                placeholderTextColor='#fff'
                 returnKeyType='go'
                 secureTextEntry
                 ref={input => { this.passwordInput = input; }}
@@ -39,16 +41,20 @@ class LoginForm extends React.Component {
       padding: '10%', 
     },
     input: {
-        height: 50,
+        height: '21.5%',
         backgroundColor: 'rgba(230,230,230,0.4)',
         marginBottom: 12,
-        paddingHorizontal: 10,
+        paddingHorizontal: '7%',
         borderRadius: 20,
+   
+        borderColor: '#fff',
+        color: 'white',
     },
     buttonContainer: {
         backgroundColor: '#2980b9',
         paddingVertical: 15,
         borderRadius: 20,
+        borderColor: '#d6d7da',
     },
     buttonText: {
         textAlign: 'center',

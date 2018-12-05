@@ -13,7 +13,7 @@ export default class Login extends React.Component {
         keyboardVerticalOffset={-100} 
         >
             <StatusBar barStyle="dark-content" /> 
-            <Text style={styles.title}>TCM</Text>
+            <Text style={styles.title}>HealthBase</Text>
             <View style={styles.logoContainer}> 
                 <Image style={styles.logo} source={minion} />
                 <Text style={styles.subTitle}>Login or Sign up</Text>
@@ -43,7 +43,7 @@ export default class Login extends React.Component {
         alignItems: 'center',
         justifyContent: 'center',
         flexGrow: 1,
-        height: '30%',
+        height: '35%',
     },
     subTitle: {
         color: '#fff',
