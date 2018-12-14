@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView, Image, StatusBar } from 'react-native';
+import { StyleSheet, Text, KeyboardAvoidingView, StatusBar } from 'react-native';
 
 
 class Forum extends React.Component {

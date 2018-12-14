@@ -10,7 +10,9 @@ const files = require('../../images/files.png');
 const headerImage = require('../../images/water3.png');
 
 class NavigationScreen extends React.Component {
-
+  static navigationOptions = {
+    headerLeft: null
+  }  
   render() {
     return (
       <View style={styles.container}>
@@ -21,10 +23,7 @@ class NavigationScreen extends React.Component {
             <Image style={styles.profile} source={joe} />
             <Text style={{ fontSize: 30, fontWeight: '700', color: 'white' }}>
                 Joe Rogan
-            </Text>
-            <Text style={{ fontSize: 15, fontWeight: '700', color: 'black' }}>
-                Level: Sage
-            </Text>
+            </Text>  
             </ImageBackground>   
             </View>
             <View style={styles.blueHeader}>
@@ -36,7 +35,7 @@ class NavigationScreen extends React.Component {
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.exam()}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.login()}>
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={exam} />
                   <Text style={styles.text}>
@@ -44,7 +43,7 @@ class NavigationScreen extends React.Component {
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.health()}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.login()}>
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={files} />
                   <Text style={styles.text}>
@@ -52,7 +51,7 @@ class NavigationScreen extends React.Component {
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.forum()}>
+              <TouchableOpacity style={styles.bottomItem} onPress={() => Actions.login()}>
                 <View style={styles.bottomItemInner}>
                   <Image style={styles.logo} source={forum} />
                   <Text style={styles.text}>
