@@ -1,18 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, KeyboardAvoidingView, StatusBar } from 'react-native';
+import { StyleSheet, Text, KeyboardAvoidingView, View, StatusBar } from 'react-native';
+import firebase from '../../../firebase';
 
 
 class Academy extends React.Component {
+
+  componentDidMount() {
+    const pointsRef = firebase.database().ref('points');
+    pointsRef.on('value', data => {
+      console.log(data.val());
+    });
+  }
     render() {
       return (
-        <KeyboardAvoidingView 
-        behavior={'position'} 
+        <View 
         style={styles.container} 
-        keyboardVerticalOffset={-100} 
         >
             <StatusBar barStyle="light-content" /> 
-            <Text style={styles.title}>Academy</Text>
-        </KeyboardAvoidingView>
+            <Text style={styles.title}>Academy under construction</Text>
+        </View>
 );
     }
   }
